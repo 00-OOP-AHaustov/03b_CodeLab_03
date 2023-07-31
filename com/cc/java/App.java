@@ -15,11 +15,14 @@ public class App {
 
     for (int i = 0; i < office.size(); i++) {
       output("------- MA " + (i + 1) + " --------------");
-      output(office.get(i).toString());
+      output(office.get(i));
     }
   }
 
   private static void output(String outStr) {
     System.out.println(outStr);
+  }
+   private static void output(Mitarbeiter mitarbeiter) {
+    System.out.println(mitarbeiter);
   }
 }
