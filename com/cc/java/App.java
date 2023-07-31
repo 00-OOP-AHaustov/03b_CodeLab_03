@@ -1,36 +1,25 @@
 package com.cc.java;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class App {
-  
-    public static void main(String[] args) {
 
-      MA_Prod ma1 = new MA_Prod("Mustermann", "Max", 1970, "ID001" , "production", "worker",2010);
-      MA_Acc ma2 = new MA_Acc("Chapeau", "Maxine", 1980, "ID002" , "accounting", "accountant",2012);
-      MA_Adv ma3 = new MA_Adv("Martinelli", "Silvia", 1995, "ID003" , "advertising", "consultant", 2018);
-      
-      
-      output("------- MA 1 --------------");	
-      output(ma1.startsWork());
-      output(ma1.hasLunch());
-      output(ma1.getEmployedTime());
-      output(ma1.doYourWork());
+  public static void main(String[] args) {
 
+    Mitarbeiter ma1 = new Produktion("Mustermann", "Max", 1970, "ID001", "production", "worker", 2010);
+    Mitarbeiter ma2 = new Buchhaltung("Chapeau", "Maxine", 1980, "ID002", "accounting", "accountant", 2012);
+    Mitarbeiter ma3 = new Werbung("Martinelli", "Silvia", 1995, "ID003", "advertising", "consultant", 2018);
+    List<Mitarbeiter> office = Arrays.asList(ma1, ma2, ma3);
 
-      output("------- MA 2 --------------");	
-      output(ma2.startsWork());
-      output(ma2.hasLunch());
-      output(ma2.getEmployedTime());
-      output(ma2.doYourWork());
-
-      output("------- MA 3 --------------");	
-      output(ma3.startsWork());
-      output(ma3.hasLunch());
-      output(ma3.getEmployedTime());
-      output(ma3.doYourWork());
-      
+    for (int i = 0; i < office.size(); i++) {
+      output("------- MA " + (i + 1) + " --------------");
+      output(office.get(i).toString());
     }
-  
-    private static void output(String outStr) {
-        System.out.println(outStr);
-    }
+  }
+
+  private static void output(String outStr) {
+    System.out.println(outStr);
+  }
 }
