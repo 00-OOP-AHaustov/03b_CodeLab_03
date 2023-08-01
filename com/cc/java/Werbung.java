@@ -12,5 +12,6 @@ public class Werbung extends Mitarbeiter {
     protected String doYourWork() {
        return "Macht geliebte Kalt-Akquise";
     }
+  
     
 }

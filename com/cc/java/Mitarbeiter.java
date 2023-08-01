@@ -12,7 +12,7 @@ public abstract class Mitarbeiter {
     protected String role;
     protected int startYear;
 
-    public Mitarbeiter(String firstName, String lastName, int birthYear, String id, String departement, String role,
+    public Mitarbeiter(String lastName, String firstName, int birthYear, String id, String departement, String role,
             int startYear) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -62,12 +62,13 @@ public abstract class Mitarbeiter {
 
     protected abstract String doYourWork();
 
+
     @Override
     public String toString() {
         return this.startsWork()+ '\n'+
         this.hasLunch() + '\n' +
         this.getEmployedTime() + '\n' +
-        this.doYourWork();
+        this.doYourWork()+'\n';
     }
 
 
