@@ -7,9 +7,9 @@ public class App {
 
   public static void main(String[] args) {
 
-    Mitarbeiter ma1 = new Produktion("Mustermann", "Max", 1970, "ID001", "production", "worker", 2010);
-    Mitarbeiter ma2 = new Buchhaltung("Chapeau", "Maxine", 1980, "ID002", "accounting", "accountant", 2012);
-    Mitarbeiter ma3 = new Werbung("Martinelli", "Silvia", 1995, "ID003", "advertising", "consultant", 2018);
+    Mitarbeiter ma1 = new Produktion("Mustermann", "Max", 1970, "ID001",  "worker", 2010);
+    Mitarbeiter ma2 = new Buchhaltung("Chapeau", "Maxine", 1980, "ID002",  "accountant", 2012);
+    Mitarbeiter ma3 = new Werbung("Martinelli", "Silvia", 1995, "ID003",  "consultant", 2018);
    
     List<Mitarbeiter> office = Arrays.asList(ma1, ma2, ma3);
 
